@@ -18,3 +18,11 @@ def count_vowels(input_string):
             vowel_count += 1
 
     return vowel_count
+
+def reverse_string(string):
+
+  reversed_string = ""
+  for i in range(len(string) - 1, -1, -1):
+    reversed_string += string[i]
+      
+  return reversed_string
