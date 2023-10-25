@@ -9,3 +9,12 @@ def generate_fibonacci(N):
         fib_sequence.append(next_number)
 
     return " ".join(map(str, fib_sequence[:N]))
+def count_vowels(input_string):
+    vowels = "aeiouAEIOU"
+    vowel_count = 0
+
+    for char in input_string:
+        if char in vowels:
+            vowel_count += 1
+
+    return vowel_count
