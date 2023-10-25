@@ -1,3 +1,98 @@
+def calculate_sum(*args):
+  """Calculates the sum of any number of arguments.
+
+  Args:
+    *args: Any number of integer or floating-point arguments.
+
+  Returns:
+    The sum of the input numbers.
+  """
+
+  sum = 0
+  for arg in args:
+    sum += arg
+  return sum
+
+
+def check_prime(number):
+  """Checks if a given integer is prime or not.
+
+  Args:
+    number: A single integer argument.
+
+  Returns:
+    Display whether the input number is prime or not.
+  """
+
+  if number <= 1:
+    print("The number is not prime.")
+    return
+  for i in range(2, int(number**0.5) + 1):
+    if number % i == 0:
+      print("The number is not prime.")
+      return
+  print("The number is prime.")
+
+
+def gcd(a, b):
+  """Calculates the greatest common divisor (GCD) of two integers.
+
+  Args:
+    a: An integer.
+    b: An integer.
+
+  Returns:
+    The greatest common divisor of the two input numbers.
+  """
+
+  while b:
+    a, b = b, a % b
+  return a
+
+def check_pangram(string):
+  """Checks if a given string is a pangram (contains all letters of the alphabet
+  at least once).
+
+  Args:
+    string: A single string.
+
+  Returns:
+    Return True if the input string is a pangram, otherwise False.
+  """
+
+  alphabet = set("abcdefghijklmnopqrstuvwxyz")
+  for letter in string.lower():
+    alphabet.remove(letter)
+  return not alphabet
+
+def word_count(sentence):
+  """Counts the number of words in a given sentence.
+
+  Args:
+    sentence: A single string (a sentence).
+
+  Returns:
+    The count of words in the input sentence.
+  """
+
+  words = sentence.split()
+  return len(words)
+
+
+def fahrenheit_to_celsius(fahrenheit):
+  """Converts a temperature from Fahrenheit to Celsius.
+
+  Args:
+    fahrenheit: A single floating-point number representing a temperature in
+      Fahrenheit.
+
+  Returns:
+    The temperature converted to Celsius.
+  """
+
+  celsius = (fahrenheit - 32) * 5 / 9
+  return celsius
+
 def generate_fibonacci(N):
     if N <= 0:
         return "Enter a positive number for N."
