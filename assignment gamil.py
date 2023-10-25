@@ -18,3 +18,22 @@ def count_vowels(input_string):
             vowel_count += 1
 
     return vowel_count
+
+def prime_factorization(number):
+  """Finds and returns the prime factors of a given positive integer.
+
+  Args:
+    number: A single positive integer.
+
+  Returns:
+    A list of prime factors of the input number.
+  """
+
+  prime_factors = []
+  for i in range(2, int(number**0.5) + 1):
+    while number % i == 0:
+      prime_factors.append(i)
+      number //= i
+  if number > 1:
+    prime_factors.append(number)
+  return prime_factors
