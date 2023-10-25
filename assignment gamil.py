@@ -18,3 +18,17 @@ def count_vowels(input_string):
             vowel_count += 1
 
     return vowel_count
+
+
+def calculate_average(*args):
+
+  Args:
+    *args: Any number of integer or floating-point arguments.
+
+  Returns:
+    The average of the input numbers.
+  """
+
+  average = sum(args) / len(args)
+  return average
+
