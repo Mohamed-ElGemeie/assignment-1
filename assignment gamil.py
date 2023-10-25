@@ -37,3 +37,16 @@ def prime_factorization(number):
   if number > 1:
     prime_factors.append(number)
   return prime_factors
+
+def calculate_average(*args):
+    """
+    Args:
+        *args: Any number of integer or floating-point arguments.
+
+    Returns:
+        The average of the input numbers.
+    """
+
+    average = sum(args) / len(args)
+    return average
+
